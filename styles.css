@@ -1,0 +1,200 @@
+:root {
+    --bg-color: #111113;
+    --primary-color: #0dcaf0;      /* biru Bootstrap */
+    --secondary-color: #ffff;    /* abu-abu */
+    --success-color: #ffffff;      /* hijau */
+    --danger-color: #dc3545;       /* merah */
+    --warning-color: #ffc107;      /* kuning */
+    --info-color: #0dcaf0;         /* biru muda */
+    --light-color: aliceblue;
+    --dark-color: #212529;
+  }
+
+*,body,html {
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-color);
+}
+
+.navbar {
+    padding: 15px;
+    background-color: var(--bg-color);
+    color: var(--bg-color);
+}
+
+.container-fluid {
+    margin: auto;
+    color: var(--success-color);
+}
+
+.navbar-brand {
+    margin-left: 10px;
+    color: var(--secondary-color);
+    font-family: "Sedgwick Ave Display", cursive;
+    font-size: 30px;
+}
+
+.material-symbols-outlined {
+    color: var(--success-color);
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-link {
+    color: var(--success-color);
+    margin: 10px;font-family: "Sedgwick Ave Display", cursive;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+
+.navbar-nav .nav-link.active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.content {
+    display: flex; /* flexbox aktif */
+    justify-content: center; /* center horizontal */
+    align-items: center; /* center vertical */
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.content-teks {
+    color: var(--success-color);
+    background-color: transparent;
+    font-family: "Silkscreen", sans-serif;
+    height: auto;
+    width: 90%;
+}
+
+.title {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.paragraf {
+    background-color: transparent;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--success-color);
+}
+
+
+  #carouselExampleIndicators {
+    width: 90%; /* tidak full (ada celah sisi kiri-kanan) */
+    margin: 20px auto; /* center dan beri jarak atas-bawah */
+    border-radius: 15px;
+    overflow: hidden; /* agar border-radius juga memotong gambar */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* opsional untuk efek bayangan */
+  }
+
+  .carousel-indicators {
+    background-color: transparent;
+  }
+
+  .carousel-inner img {
+    border-radius: 15px;
+    object-fit: cover;
+    height: auto;
+    min-height: 200px;
+    max-height: 450px; /* batas tinggi agar tidak terlalu besar */
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    #carouselExampleIndicators {
+      width: 95%; /* lebih fleksibel untuk HP */
+    }
+  }
+
+  .content-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; /* default: tidak wrap */
+    gap: 16px; /* agar ada jarak antar card */
+  }
+
+  @media (max-width: 600px) {
+    .content-card {
+      flex-wrap: wrap; /* wrap di layar kecil */
+    }
+  }
+
+
+  .custom-card {
+    width: 90%; /* agar tidak full, masih ada celah */
+    max-width: 18rem; /* batasi maksimal lebarnya */
+    margin: 20px auto; /* center dan beri jarak atas-bawah */
+    border-radius: 15px;
+    overflow: hidden;
+    color: var(--success-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* efek bayangan */
+  }
+
+  .custom-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .custom-card {
+      width: 95%;
+    }
+  }
+
+  .card-title {
+    color: var(--primary-color);
+  }
+
+  .custom-footer {
+    background-color: var(--bg-color);
+    color: var(--success-color);
+    padding: 40px 20px;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .footer-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+
+  .footer-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .footer-icons img {
+    height: 30px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* agar semua logo putih */
+    transition: transform 0.3s ease;
+  }
+
+  .footer-icons img:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 600px) {
+    .footer-icons img {
+      height: 24px;
+    }
+  }
